@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;  /* Center text for the entire body */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center the cards */
+    margin-top: 20px;  /* Provide some space between the headers and the cards */
+}
+
+.card {
+    background-color: #bdbec0;  /* Light grey background */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: left;
+}
+
+.card h4 {
+    color: #007bff;  /* Blue color */
+    font-size: 24px;  /* Larger font size */
+    text-align: center;  /* Center text within the card */
+}
+
+h1, h2, h3 {
+    color: #336699;
+}
+
+p {
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 600px;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    background-color: #f1f1f1;
+}
+

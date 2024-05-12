@@ -1,49 +1,71 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f9;
     color: #333;
-    text-align: center;  /* Center text for the entire body */
+    text-align: center;
+}
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;  /* Center the cards */
-    margin-top: 20px;  /* Provide some space between the headers and the cards */
+    flex-wrap:wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    padding: 5px;
+    margin: 0 auto
 }
 
 .card {
-    background-color: #bdbec0;  /* Light grey background */
+    display: inline-block;
+    background-color: #b2b2b2;
     border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 300px;
-    text-align: left;
-}
-
-.card h4 {
-    color: #007bff;  /* Blue color */
-    font-size: 24px;  /* Larger font size */
-    text-align: center;  /* Center text within the card */
-}
-
-h1, h2, h3 {
-    color: #336699;
-}
-
-p {
-    font-size: 16px;
+    padding: 1px;
+    border-radius: 25px 0;
+    box-shadow: 0 6px 17px rgba(0,0,0,0.1);
+    width: 70%; /* default to full width on mobile devices */
+    margin: 5px 0; /* vertical margin for mobile */
+    text-align:center
 }
 
 footer {
-    text-align: center;
-    margin-top: 600px;
-    padding: 10px;
-    font-size: 14px;
+    background-color: #eee;
     color: #666;
-    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
 }
 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .card {
+        width: 48%; /* two cards per row on tablets */
+        margin: 10px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        justify-content: space-around; /* adjust spacing around items */
+    }
+
+    .card {
+        width: 30%; /* three cards per row on desktops */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .card {
+        width: calc(25% - 20px); /* Adjusted to fit four cards per row */
+        margin: 10px; /* Maintain uniform margin around cards */
+    }
+}

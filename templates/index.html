@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Data</title>
+    <title>Stock Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1><strong>Trading Bot</strong></h1>
-    
-    <h3>Stock Information</h3>
-    <div class="container">
+    <div class="header">
+        <h1>Trade Bot</h1>
+        <h2>Stock Information</h2>
+    </div>
+    <p><strong>Market Status:</strong> {{ market_status }}</p>
+    {% if check_again_message %}
+        <p><strong>Notice:</strong> {{ check_again_message }}</p>
+    {% endif %}
+    <p><strong>Portfolio Balance:</strong> ${{ portfolio_balance }}</p>
+
+    <h2>Stock Prices</h2>
+    <div class="card-container">
         {% for data in data_list %}
             <div class="card">
-                <h4>{{ data.symbol }}</h4>
-                <p><strong>Market Status:</strong> {{ data.market_status }}</p>
-                <p><strong>Marketplace:</strong> {{ data.exchange }}</p>
-                {% if data.message %}
-                    <p>{{ data.message }}</p>
+                <h3>{{ data.symbol }}</h3>
+                <p>Last Close: ${{ data.last_close }}<br>
+                {% if data.last_close_time %}
+                    ({{ data.last_close_time.strftime('%Y-%m-%d %H:%M:%S') }})
                 {% else %}
-                    <p><strong>Last Close Price:</strong> ${{ data.last_close }}</p>
-                    <p><strong>Date:</strong> {{ data.last_close_time }}</p>
+                    (Time data not available)
+                {% endif %}
+                </p>
+                <p>Exchange: {{ data.exchange }}</p>
+                {% if data.message %}
+                    <em>{{ data.message }}</em>
+                {% else %}
+                    <p>SMA: {{ data.sma }}</p>
                 {% endif %}
             </div>
         {% endfor %}
     </div>
-    <footer>
-        <p>This software was created and powered by <a href="http://www.clickecommerce.com.au" target="_blank">Click eCommerce</a></p>
-    </footer>
 </body>
 </html>

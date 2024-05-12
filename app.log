@@ -1,0 +1,134 @@
+2024-05-11 16:43:08,322 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.4.32:5000
+2024-05-11 16:43:08,323 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-11 16:43:08,324 INFO werkzeug  * Restarting with stat
+2024-05-11 16:43:09,018 WARNING werkzeug  * Debugger is active!
+2024-05-11 16:43:09,021 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-11 16:44:04,547 INFO __main__ Accessing the index route
+2024-05-11 16:44:04,548 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): paper-api.alpaca.markets:443
+2024-05-11 16:44:05,274 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/clock HTTP/1.1" 200 148
+2024-05-11 16:44:05,290 INFO __main__ Market is closed.
+2024-05-11 16:44:05,516 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 200 None
+2024-05-11 16:44:05,516 DEBUG __main__ Current portfolio balance: 100000
+2024-05-11 16:44:05,517 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): data.alpaca.markets:443
+2024-05-11 16:44:06,225 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/GLD/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 51
+2024-05-11 16:44:06,451 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/GLD HTTP/1.1" 200 343
+2024-05-11 16:44:06,680 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/AAPL/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 16:44:06,905 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/AAPL HTTP/1.1" 200 334
+2024-05-11 16:44:07,145 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/MSFT/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 16:44:07,374 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/MSFT HTTP/1.1" 200 345
+2024-05-11 16:44:07,405 INFO werkzeug 127.0.0.1 - - [11/May/2024 16:44:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-05-11 16:44:07,460 INFO werkzeug 127.0.0.1 - - [11/May/2024 16:44:07] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-05-11 16:44:07,742 INFO werkzeug 127.0.0.1 - - [11/May/2024 16:44:07] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-05-11 16:44:08,089 INFO werkzeug 127.0.0.1 - - [11/May/2024 16:44:08] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-05-11 16:44:08,337 INFO werkzeug 127.0.0.1 - - [11/May/2024 16:44:08] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-11 16:47:14,022 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-11 16:47:14,096 INFO werkzeug  * Restarting with stat
+2024-05-11 20:54:08,334 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.4.32:5000
+2024-05-11 20:54:08,335 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-11 20:54:08,336 INFO werkzeug  * Restarting with stat
+2024-05-11 20:54:09,011 WARNING werkzeug  * Debugger is active!
+2024-05-11 20:54:09,014 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-11 20:55:29,251 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-11 20:55:29,331 INFO werkzeug  * Restarting with stat
+2024-05-11 20:55:30,034 WARNING werkzeug  * Debugger is active!
+2024-05-11 20:55:30,038 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-11 20:55:38,674 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-11 20:55:38,675 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-11 20:55:38,676 INFO werkzeug  * Restarting with stat
+2024-05-11 20:55:39,353 WARNING werkzeug  * Debugger is active!
+2024-05-11 20:55:39,357 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-11 20:55:50,085 INFO __main__ Accessing the index route
+2024-05-11 20:55:50,086 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): paper-api.alpaca.markets:443
+2024-05-11 20:55:50,875 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/clock HTTP/1.1" 200 148
+2024-05-11 20:55:50,875 INFO __main__ Market is closed.
+2024-05-11 20:55:51,106 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 200 None
+2024-05-11 20:55:51,106 DEBUG __main__ Current portfolio balance: 100000
+2024-05-11 20:55:51,108 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): data.alpaca.markets:443
+2024-05-11 20:55:51,834 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/GLD/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 51
+2024-05-11 20:55:52,061 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/GLD HTTP/1.1" 200 343
+2024-05-11 20:55:52,290 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/AAPL/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 20:55:52,517 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/AAPL HTTP/1.1" 200 334
+2024-05-11 20:55:52,743 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/MSFT/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 20:55:52,968 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/MSFT HTTP/1.1" 200 345
+2024-05-11 20:55:52,990 INFO werkzeug 127.0.0.1 - - [11/May/2024 20:55:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-05-11 20:55:53,052 INFO werkzeug 127.0.0.1 - - [11/May/2024 20:55:53] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-05-11 20:55:53,328 INFO werkzeug 127.0.0.1 - - [11/May/2024 20:55:53] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-05-11 20:55:53,665 INFO werkzeug 127.0.0.1 - - [11/May/2024 20:55:53] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-11 21:00:10,726 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-11 21:00:10,805 INFO werkzeug  * Restarting with stat
+2024-05-11 21:00:11,501 WARNING werkzeug  * Debugger is active!
+2024-05-11 21:00:11,505 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-11 21:02:24,214 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.4.32:5000
+2024-05-11 21:02:24,214 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-11 21:02:24,215 INFO werkzeug  * Restarting with stat
+2024-05-11 21:02:24,932 WARNING werkzeug  * Debugger is active!
+2024-05-11 21:02:24,936 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-11 21:02:35,026 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): paper-api.alpaca.markets:443
+2024-05-11 21:02:35,849 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/clock HTTP/1.1" 200 147
+2024-05-11 21:02:35,850 INFO __main__ Market is closed.
+2024-05-11 21:02:36,076 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 200 None
+2024-05-11 21:02:36,077 DEBUG __main__ Current portfolio balance: 100000
+2024-05-11 21:02:36,079 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): data.alpaca.markets:443
+2024-05-11 21:02:36,829 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/GLD/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 51
+2024-05-11 21:02:37,056 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/GLD HTTP/1.1" 200 343
+2024-05-11 21:02:37,286 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/AAPL/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 21:02:37,514 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/AAPL HTTP/1.1" 200 334
+2024-05-11 21:02:37,743 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/MSFT/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 21:02:37,974 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/MSFT HTTP/1.1" 200 345
+2024-05-11 21:02:37,976 INFO werkzeug 127.0.0.1 - - [11/May/2024 21:02:37] "GET / HTTP/1.1" 200 -
+2024-05-11 21:02:38,172 INFO werkzeug 127.0.0.1 - - [11/May/2024 21:02:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-11 21:03:28,370 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/clock HTTP/1.1" 200 148
+2024-05-11 21:03:28,371 INFO __main__ Market is closed.
+2024-05-11 21:03:28,599 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 200 None
+2024-05-11 21:03:28,600 DEBUG __main__ Current portfolio balance: 100000
+2024-05-11 21:03:28,830 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/GLD/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 51
+2024-05-11 21:03:29,057 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/GLD HTTP/1.1" 200 343
+2024-05-11 21:03:29,288 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/AAPL/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 21:03:29,514 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/AAPL HTTP/1.1" 200 334
+2024-05-11 21:03:29,748 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/MSFT/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-11 21:03:29,975 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/MSFT HTTP/1.1" 200 345
+2024-05-11 21:03:29,980 INFO werkzeug 127.0.0.1 - - [11/May/2024 21:03:29] "GET / HTTP/1.1" 200 -
+2024-05-11 21:03:30,027 INFO werkzeug 127.0.0.1 - - [11/May/2024 21:03:30] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-12 12:13:24,885 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.4.32:5000
+2024-05-12 12:13:24,886 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-12 12:13:24,888 INFO werkzeug  * Restarting with stat
+2024-05-12 12:13:25,639 WARNING werkzeug  * Debugger is active!
+2024-05-12 12:13:25,644 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-12 12:14:08,010 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): paper-api.alpaca.markets:443
+2024-05-12 12:14:09,321 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/clock HTTP/1.1" 200 147
+2024-05-12 12:14:09,322 INFO __main__ Market is closed.
+2024-05-12 12:14:09,548 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 200 None
+2024-05-12 12:14:09,572 DEBUG __main__ Current portfolio balance: 100000
+2024-05-12 12:14:09,573 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): data.alpaca.markets:443
+2024-05-12 12:14:10,471 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/GLD/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 51
+2024-05-12 12:14:10,724 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/GLD HTTP/1.1" 200 343
+2024-05-12 12:14:10,951 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/AAPL/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-12 12:14:11,177 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/AAPL HTTP/1.1" 200 334
+2024-05-12 12:14:11,409 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/MSFT/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 52
+2024-05-12 12:14:11,638 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/MSFT HTTP/1.1" 200 345
+2024-05-12 12:14:12,149 INFO werkzeug 127.0.0.1 - - [12/May/2024 12:14:12] "GET / HTTP/1.1" 200 -
+2024-05-12 12:14:12,222 INFO werkzeug 127.0.0.1 - - [12/May/2024 12:14:12] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-12 12:14:12,630 INFO werkzeug 127.0.0.1 - - [12/May/2024 12:14:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-12 12:18:38,417 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-12 12:18:38,517 INFO werkzeug  * Restarting with stat
+2024-05-12 12:18:39,238 WARNING werkzeug  * Debugger is active!
+2024-05-12 12:18:39,242 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-12 12:18:50,684 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-12 12:18:50,685 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-12 12:18:50,686 INFO werkzeug  * Restarting with stat
+2024-05-12 12:18:51,394 WARNING werkzeug  * Debugger is active!
+2024-05-12 12:18:51,398 INFO werkzeug  * Debugger PIN: 678-019-846

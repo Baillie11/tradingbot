@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+}
+
+.message {
+    font-size: 18px;
+    color: red;
+    margin: 20px;
+}
+
+.container {
+    display: flex;  /* Enables flexbox */
+    flex-wrap: wrap;  /* Allows items to wrap onto the next line as needed */
+    justify-content: center;  /* Centers items horizontally in the container */
+    align-items: flex-start;  /* Aligns items to the start of the cross axis */
+    gap: 20px;  /* Space between each card */
+    padding: 20px;
+}
+
+.card {
+    flex: 1 1 200px;  /* Allows the card to grow and shrink but not smaller than 200px */
+    background-color: #b2b2b2;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;  /* Center text within each card */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eee;
+    text-align: center;
+}

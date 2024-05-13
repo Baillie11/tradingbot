@@ -9,15 +9,12 @@
 <body>
     <div class="header">
         <h1>Trade Bot</h1>
-        <h2>Dashboard</h2>
+        <h2>Stock Information</h2>
     </div>
     <p><strong>Market Status:</strong> {{ market_status }}</p>
     {% if check_again_message %}
-    <p><strong>Notice:</strong> {{ check_again_message }}</p>
-    {% if countdown_message %}
-        <p>Market will re-open in: {{ countdown_message }}</p>
+        <p><strong>Notice:</strong> {{ check_again_message }}</p>
     {% endif %}
-{% endif %}
     <p><strong>Portfolio Balance:</strong> ${{ portfolio_balance }}</p>
 
     <h2>Stock Prices</h2>

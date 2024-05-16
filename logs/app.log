@@ -516,3 +516,53 @@
 2024-05-13 14:02:06,881 ERROR __main__ Error retrieving data for MSFT: subscription does not permit querying recent SIP data
 2024-05-13 14:02:06,885 INFO werkzeug 127.0.0.1 - - [13/May/2024 14:02:06] "GET / HTTP/1.1" 200 -
 2024-05-13 14:02:06,904 INFO werkzeug 127.0.0.1 - - [13/May/2024 14:02:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-16 12:25:03,271 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 12:25:03,281 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 12:25:03,283 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 12:25:03,283 INFO apscheduler.scheduler Scheduler started
+2024-05-16 12:25:03,284 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 12:25:03,284 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 13:25:03.281730+10:00 (in 3599.996999 seconds)
+2024-05-16 12:25:03,301 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 12:25:03,301 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 12:25:03,304 INFO werkzeug  * Restarting with stat
+2024-05-16 12:25:04,144 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 12:25:04,148 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 12:25:04,149 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 12:25:04,149 INFO apscheduler.scheduler Scheduler started
+2024-05-16 12:25:04,150 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 12:25:04,150 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 13:25:04.148128+10:00 (in 3599.997998 seconds)
+2024-05-16 12:25:04,156 WARNING werkzeug  * Debugger is active!
+2024-05-16 12:25:04,160 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 12:25:12,040 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): paper-api.alpaca.markets:443
+2024-05-16 12:25:12,904 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/clock HTTP/1.1" 200 148
+2024-05-16 12:25:14,337 INFO __main__ Market is closed.
+2024-05-16 12:25:14,564 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 200 None
+2024-05-16 12:25:14,565 DEBUG __main__ Current portfolio balance: 100000
+2024-05-16 12:25:14,566 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): data.alpaca.markets:443
+2024-05-16 12:25:15,263 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/GLD/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 160
+2024-05-16 12:25:15,501 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/GLD HTTP/1.1" 200 343
+2024-05-16 12:25:15,733 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/AAPL/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 162
+2024-05-16 12:25:15,958 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/AAPL HTTP/1.1" 200 334
+2024-05-16 12:25:16,205 DEBUG urllib3.connectionpool https://data.alpaca.markets:443 "GET /v2/stocks/MSFT/bars?timeframe=1Day&adjustment=raw&limit=5 HTTP/1.1" 200 161
+2024-05-16 12:25:16,432 DEBUG urllib3.connectionpool https://paper-api.alpaca.markets:443 "GET /v2/assets/MSFT HTTP/1.1" 200 345
+2024-05-16 12:25:16,439 INFO werkzeug 127.0.0.1 - - [16/May/2024 12:25:16] "GET / HTTP/1.1" 200 -
+2024-05-16 12:25:16,500 INFO werkzeug 127.0.0.1 - - [16/May/2024 12:25:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-16 13:14:36,528 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 13:14:36,536 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 13:14:36,539 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 13:14:36,540 INFO apscheduler.scheduler Scheduler started
+2024-05-16 13:14:36,542 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 13:14:36,543 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 14:14:36.535872+10:00 (in 3599.991997 seconds)
+2024-05-16 13:14:36,561 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 13:14:36,561 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 13:14:36,564 INFO werkzeug  * Restarting with stat
+2024-05-16 13:14:38,430 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 13:14:38,435 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 13:14:38,438 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 13:14:38,438 INFO apscheduler.scheduler Scheduler started
+2024-05-16 13:14:38,439 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 13:14:38,440 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 14:14:38.435813+10:00 (in 3599.994999 seconds)
+2024-05-16 13:14:38,446 WARNING werkzeug  * Debugger is active!
+2024-05-16 13:14:38,451 INFO werkzeug  * Debugger PIN: 470-647-527

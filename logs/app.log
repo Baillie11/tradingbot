@@ -566,3 +566,413 @@
 2024-05-16 13:14:38,440 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 14:14:38.435813+10:00 (in 3599.994999 seconds)
 2024-05-16 13:14:38,446 WARNING werkzeug  * Debugger is active!
 2024-05-16 13:14:38,451 INFO werkzeug  * Debugger PIN: 470-647-527
+2024-05-16 14:10:00,986 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 14:10:00,987 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 14:10:00,987 INFO werkzeug  * Restarting with stat
+2024-05-16 14:10:01,730 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:10:01,734 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:10:16,546 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:10:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-05-16 14:10:16,626 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:10:16] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-05-16 14:10:16,636 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:10:16] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-05-16 14:10:16,659 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:10:16] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-05-16 14:10:16,661 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:10:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-16 14:12:11,263 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 14:12:11,370 INFO werkzeug  * Restarting with stat
+2024-05-16 14:12:12,134 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:12:12,138 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:12:18,326 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 14:12:18,327 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 14:12:18,327 INFO werkzeug  * Restarting with stat
+2024-05-16 14:12:19,072 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:12:19,076 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:12:23,065 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:12:23] "GET / HTTP/1.1" 200 -
+2024-05-16 14:12:23,115 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:12:23] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:12:23,118 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:12:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-16 14:24:32,597 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 14:24:32,598 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 14:24:32,598 INFO werkzeug  * Restarting with stat
+2024-05-16 14:24:33,282 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:24:33,285 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:24:45,983 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:24:45] "GET / HTTP/1.1" 200 -
+2024-05-16 14:24:46,057 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:24:46] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:24:46,070 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:24:46] "GET /static/socket_connection.js HTTP/1.1" 200 -
+2024-05-16 14:24:49,695 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:24:49] "GET / HTTP/1.1" 200 -
+2024-05-16 14:24:49,703 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:24:49] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 14:24:49,704 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:24:49] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:27:38,700 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 14:27:38,700 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 14:27:38,700 INFO werkzeug  * Restarting with stat
+2024-05-16 14:27:39,387 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:27:39,391 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:27:49,802 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:27:49] "GET / HTTP/1.1" 200 -
+2024-05-16 14:27:49,878 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:27:49] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:27:49,887 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:27:49] "GET /static/socket_connection.js HTTP/1.1" 200 -
+2024-05-16 14:29:48,662 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 14:29:48,663 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 14:29:48,663 INFO werkzeug  * Restarting with stat
+2024-05-16 14:29:49,346 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:29:49,350 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:29:53,479 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:29:53] "GET / HTTP/1.1" 200 -
+2024-05-16 14:29:53,552 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:29:53] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 14:29:53,553 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:29:53] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:30:42,178 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 14:30:42,178 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 14:30:42,178 INFO werkzeug  * Restarting with stat
+2024-05-16 14:30:42,867 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:30:42,871 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:31:57,341 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 14:31:57,429 INFO werkzeug  * Restarting with stat
+2024-05-16 14:51:20,778 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 14:51:20,781 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 14:51:20,781 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 14:51:20,781 INFO apscheduler.scheduler Scheduler started
+2024-05-16 14:51:20,782 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 14:51:20,783 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 15:51:20.780658+10:00 (in 3599.996999 seconds)
+2024-05-16 14:51:20,789 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 14:51:20,789 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 14:51:20,789 INFO werkzeug  * Restarting with stat
+2024-05-16 14:51:21,523 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 14:51:21,526 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 14:51:21,526 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 14:51:21,527 INFO apscheduler.scheduler Scheduler started
+2024-05-16 14:51:21,527 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 14:51:21,528 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 15:51:21.526128+10:00 (in 3599.997999 seconds)
+2024-05-16 14:51:21,529 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:51:21,532 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:51:35,900 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:35] "GET / HTTP/1.1" 200 -
+2024-05-16 14:51:35,981 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:35] "GET /static/socket_connection.js HTTP/1.1" 200 -
+2024-05-16 14:51:35,982 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:35] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:51:36,130 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-16 14:51:39,548 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:39] "GET / HTTP/1.1" 200 -
+2024-05-16 14:51:39,557 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:39] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 14:51:39,557 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:39] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:51:39,580 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:51:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-16 14:57:46,591 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 14:57:46,675 INFO werkzeug  * Restarting with stat
+2024-05-16 14:57:47,411 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 14:57:47,413 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 14:57:47,414 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 14:57:47,414 INFO apscheduler.scheduler Scheduler started
+2024-05-16 14:57:47,414 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 14:57:47,415 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 15:57:47.413944+10:00 (in 3599.998000 seconds)
+2024-05-16 14:57:47,416 WARNING werkzeug  * Debugger is active!
+2024-05-16 14:57:47,419 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 14:58:40,503 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:40] "GET / HTTP/1.1" 200 -
+2024-05-16 14:58:40,593 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:40] "GET /socket.io/?EIO=4&transport=polling&t=Oz_n4PF HTTP/1.1" 200 -
+2024-05-16 14:58:40,601 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:40] "POST /socket.io/?EIO=4&transport=polling&t=Oz_n4PM&sid=Ldlb9N9y9r3xhW7bAAAA HTTP/1.1" 200 -
+2024-05-16 14:58:40,602 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:40] "GET /socket.io/?EIO=4&transport=polling&t=Oz_n4PN&sid=Ldlb9N9y9r3xhW7bAAAA HTTP/1.1" 200 -
+2024-05-16 14:58:40,609 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:40] "GET /socket.io/?EIO=4&transport=polling&t=Oz_n4PV&sid=Ldlb9N9y9r3xhW7bAAAA HTTP/1.1" 200 -
+2024-05-16 14:58:50,440 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:50] "GET /socket.io/?EIO=4&transport=websocket&sid=Ldlb9N9y9r3xhW7bAAAA HTTP/1.1" 200 -
+2024-05-16 14:58:50,447 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:50] "GET / HTTP/1.1" 200 -
+2024-05-16 14:58:50,519 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:50] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 14:58:50,519 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:58:50] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 14:59:07,990 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:59:07] "GET / HTTP/1.1" 200 -
+2024-05-16 14:59:07,999 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:59:07] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 14:59:07,999 INFO werkzeug 127.0.0.1 - - [16/May/2024 14:59:07] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 15:03:14,858 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:03:14,861 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:03:14,861 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:03:14,862 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:03:14,862 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:03:14,863 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:03:14.860262+10:00 (in 3599.996999 seconds)
+2024-05-16 15:03:14,869 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 15:03:14,869 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 15:03:14,869 INFO werkzeug  * Restarting with stat
+2024-05-16 15:03:15,592 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:03:15,594 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:03:15,595 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:03:15,595 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:03:15,596 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:03:15,597 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:03:15.594510+10:00 (in 3599.996998 seconds)
+2024-05-16 15:03:15,598 WARNING werkzeug  * Debugger is active!
+2024-05-16 15:03:15,601 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 15:03:26,797 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:03:26] "GET / HTTP/1.1" 200 -
+2024-05-16 15:03:26,868 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:03:26] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 15:03:26,875 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:03:26] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 15:04:02,375 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 15:04:02,458 INFO werkzeug  * Restarting with stat
+2024-05-16 15:04:03,172 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:04:03,175 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:04:03,176 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:04:03,176 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:04:03,176 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:04:03,177 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:04:03.175973+10:00 (in 3599.997998 seconds)
+2024-05-16 15:04:03,178 WARNING werkzeug  * Debugger is active!
+2024-05-16 15:04:03,181 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 15:04:15,526 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:15] "GET / HTTP/1.1" 200 -
+2024-05-16 15:04:15,598 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:15] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 15:04:15,598 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:15] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 15:04:17,017 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:17] "GET / HTTP/1.1" 200 -
+2024-05-16 15:04:17,025 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-16 15:04:17,025 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:17] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 15:04:44,631 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 15:04:44,717 INFO werkzeug  * Restarting with stat
+2024-05-16 15:04:45,429 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:04:45,431 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:04:45,432 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:04:45,432 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:04:45,432 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:04:45,433 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:04:45.431184+10:00 (in 3599.997998 seconds)
+2024-05-16 15:04:45,434 WARNING werkzeug  * Debugger is active!
+2024-05-16 15:04:45,437 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 15:04:49,781 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 15:04:49,871 INFO werkzeug  * Restarting with stat
+2024-05-16 15:04:50,604 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:04:50,607 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:04:50,607 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:04:50,608 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:04:50,608 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:04:50,609 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:04:50.607521+10:00 (in 3599.998000 seconds)
+2024-05-16 15:04:50,610 WARNING werkzeug  * Debugger is active!
+2024-05-16 15:04:50,613 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 15:04:51,553 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:51] "GET / HTTP/1.1" 200 -
+2024-05-16 15:04:51,618 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:51] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 15:04:51,620 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:04:51] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 15:07:05,156 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 15:07:05,235 INFO werkzeug  * Restarting with stat
+2024-05-16 15:07:05,951 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:07:05,953 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:07:05,954 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:07:05,954 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:07:05,955 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:07:05,955 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:07:05.953376+10:00 (in 3599.998000 seconds)
+2024-05-16 15:07:05,956 WARNING werkzeug  * Debugger is active!
+2024-05-16 15:07:05,960 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 15:07:08,924 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:08] "GET / HTTP/1.1" 200 -
+2024-05-16 15:07:08,998 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:08] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 15:07:08,998 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:08] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 15:07:13,855 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:13] "GET / HTTP/1.1" 200 -
+2024-05-16 15:07:13,867 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:13] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 15:07:13,867 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:13] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 15:07:26,889 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:07:26,892 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:07:26,893 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:07:26,893 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:07:26,894 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:07:26,894 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:07:26.892525+10:00 (in 3599.997998 seconds)
+2024-05-16 15:07:26,900 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-16 15:07:26,900 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-16 15:07:26,901 INFO werkzeug  * Restarting with stat
+2024-05-16 15:07:27,615 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:07:27,618 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:07:27,619 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:07:27,619 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:07:27,619 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:07:27,620 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:07:27.618756+10:00 (in 3599.997998 seconds)
+2024-05-16 15:07:27,621 WARNING werkzeug  * Debugger is active!
+2024-05-16 15:07:27,624 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 15:07:30,911 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:30] "GET / HTTP/1.1" 200 -
+2024-05-16 15:07:30,978 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:30] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-16 15:07:30,980 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:30] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-16 15:07:30,984 INFO werkzeug 127.0.0.1 - - [16/May/2024 15:07:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-16 15:08:11,109 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 15:08:11,227 INFO werkzeug  * Restarting with stat
+2024-05-16 15:08:11,971 DEBUG tzlocal Looking up time zone info from registry
+2024-05-16 15:08:11,974 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-16 15:08:11,975 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-16 15:08:11,975 INFO apscheduler.scheduler Scheduler started
+2024-05-16 15:08:11,976 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-16 15:08:11,976 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-16 16:08:11.974801+10:00 (in 3599.997998 seconds)
+2024-05-16 15:08:11,977 WARNING werkzeug  * Debugger is active!
+2024-05-16 15:08:11,980 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-16 15:08:40,639 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-16 15:08:40,727 INFO werkzeug  * Restarting with stat
+2024-05-17 10:17:59,608 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 10:17:59,615 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 10:17:59,616 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 10:17:59,616 INFO apscheduler.scheduler Scheduler started
+2024-05-17 10:17:59,617 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 10:17:59,617 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 11:17:59.615058+10:00 (in 3599.997999 seconds)
+2024-05-17 10:17:59,630 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-17 10:17:59,630 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-17 10:17:59,630 INFO werkzeug  * Restarting with stat
+2024-05-17 10:18:00,392 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 10:18:00,395 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 10:18:00,396 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 10:18:00,396 INFO apscheduler.scheduler Scheduler started
+2024-05-17 10:18:00,396 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 10:18:00,397 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 11:18:00.395336+10:00 (in 3599.997999 seconds)
+2024-05-17 10:18:00,397 WARNING werkzeug  * Debugger is active!
+2024-05-17 10:18:00,401 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 10:18:07,927 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:18:07] "GET / HTTP/1.1" 200 -
+2024-05-17 10:18:07,999 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:18:07] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:18:08,003 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:18:08] "GET /static/socket_connection.js HTTP/1.1" 200 -
+2024-05-17 10:20:44,268 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:20:44] "GET / HTTP/1.1" 200 -
+2024-05-17 10:20:44,279 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:20:44] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:20:44,279 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:20:44] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:26:06,990 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:26:06] "GET / HTTP/1.1" 200 -
+2024-05-17 10:26:06,999 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:26:06] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:26:06,999 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:26:06] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:27:36,098 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:27:36] "GET / HTTP/1.1" 200 -
+2024-05-17 10:27:36,106 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:27:36] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:27:36,107 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:27:36] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:27:56,503 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:27:56] "GET / HTTP/1.1" 200 -
+2024-05-17 10:27:56,517 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:27:56] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:27:56,517 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:27:56] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:32:08,814 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:32:08] "GET / HTTP/1.1" 200 -
+2024-05-17 10:32:09,074 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:32:09] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:32:09,136 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:32:09] "GET /static/socket_connection.js HTTP/1.1" 200 -
+2024-05-17 10:32:09,313 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:32:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-17 10:32:32,509 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:32:32] "GET / HTTP/1.1" 200 -
+2024-05-17 10:32:32,765 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:32:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 10:32:32,827 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:32:32] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:33:00,772 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:33:00] "GET / HTTP/1.1" 200 -
+2024-05-17 10:33:01,102 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:33:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 10:33:01,102 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:33:01] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:34:22,794 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:34:22] "GET / HTTP/1.1" 200 -
+2024-05-17 10:34:23,061 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:34:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 10:34:23,108 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:34:23] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:35:05,404 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:35:05] "GET / HTTP/1.1" 200 -
+2024-05-17 10:35:05,733 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:35:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 10:35:05,734 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:35:05] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:35:35,234 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:35:35] "GET / HTTP/1.1" 200 -
+2024-05-17 10:35:35,551 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:35:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 10:35:35,551 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:35:35] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:36:19,810 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:36:19] "GET / HTTP/1.1" 200 -
+2024-05-17 10:36:20,131 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:36:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 10:36:20,131 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:36:20] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:46:35,976 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:46:35] "GET / HTTP/1.1" 200 -
+2024-05-17 10:46:36,238 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:46:36] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:46:36,300 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:46:36] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:46:39,085 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:46:39] "GET / HTTP/1.1" 200 -
+2024-05-17 10:46:39,402 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:46:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 10:46:39,402 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:46:39] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:47:58,063 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:47:58] "GET / HTTP/1.1" 200 -
+2024-05-17 10:47:58,326 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:47:58] "GET /static/styles.css HTTP/1.1" 200 -
+2024-05-17 10:47:58,390 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:47:58] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -
+2024-05-17 10:52:15,730 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-17 10:52:15,813 INFO werkzeug  * Restarting with stat
+2024-05-17 10:52:16,702 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 10:52:16,705 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 10:52:16,706 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 10:52:16,706 INFO apscheduler.scheduler Scheduler started
+2024-05-17 10:52:16,707 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 10:52:16,707 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 11:52:16.705504+10:00 (in 3599.998000 seconds)
+2024-05-17 10:52:16,708 WARNING werkzeug  * Debugger is active!
+2024-05-17 10:52:16,712 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 10:52:40,456 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): api.alpaca.markets:443
+2024-05-17 10:52:41,983 DEBUG urllib3.connectionpool https://api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 401 55
+2024-05-17 10:52:41,983 ERROR __main__ Error fetching portfolio balance: request is not authorized
+2024-05-17 10:52:42,009 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:52:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-05-17 10:52:42,070 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:52:42] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-05-17 10:52:42,347 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:52:42] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-05-17 10:52:42,683 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:52:42] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-17 10:52:42,941 INFO werkzeug 127.0.0.1 - - [17/May/2024 10:52:42] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-17 11:11:52,976 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 11:11:52,979 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 11:11:52,980 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 11:11:52,981 INFO apscheduler.scheduler Scheduler started
+2024-05-17 11:11:52,981 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 11:11:52,982 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 12:11:52.979038+10:00 (in 3599.996999 seconds)
+2024-05-17 11:11:52,987 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-17 11:11:52,988 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-17 11:11:52,988 INFO werkzeug  * Restarting with stat
+2024-05-17 11:11:53,819 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 11:11:53,822 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 11:11:53,823 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 11:11:53,823 INFO apscheduler.scheduler Scheduler started
+2024-05-17 11:11:53,824 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 11:11:53,825 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 12:11:53.822578+10:00 (in 3599.996999 seconds)
+2024-05-17 11:11:53,825 WARNING werkzeug  * Debugger is active!
+2024-05-17 11:11:53,829 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 11:12:03,230 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): api.alpaca.markets:443
+2024-05-17 11:12:04,167 DEBUG urllib3.connectionpool https://api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 401 55
+2024-05-17 11:12:04,167 ERROR __main__ Error fetching portfolio balance: request is not authorized
+2024-05-17 11:12:04,179 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:12:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-05-17 11:12:04,257 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:12:04] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-05-17 11:12:04,258 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:12:04] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-05-17 11:12:04,275 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:12:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-17 11:13:29,225 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-17 11:13:29,320 INFO werkzeug  * Restarting with stat
+2024-05-17 11:13:30,133 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 11:13:30,136 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 11:13:30,137 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 11:13:30,137 INFO apscheduler.scheduler Scheduler started
+2024-05-17 11:13:30,138 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 11:13:30,139 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 12:13:30.136510+10:00 (in 3599.996999 seconds)
+2024-05-17 11:13:30,139 WARNING werkzeug  * Debugger is active!
+2024-05-17 11:13:30,143 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 11:13:45,338 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 11:13:45,342 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 11:13:45,342 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 11:13:45,343 INFO apscheduler.scheduler Scheduler started
+2024-05-17 11:13:45,343 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 11:13:45,344 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 12:13:45.341252+10:00 (in 3599.996999 seconds)
+2024-05-17 11:13:45,350 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-17 11:13:45,350 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-17 11:13:45,350 INFO werkzeug  * Restarting with stat
+2024-05-17 11:13:46,127 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 11:13:46,130 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 11:13:46,130 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 11:13:46,130 INFO apscheduler.scheduler Scheduler started
+2024-05-17 11:13:46,131 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 11:13:46,132 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 12:13:46.130501+10:00 (in 3599.997999 seconds)
+2024-05-17 11:13:46,132 WARNING werkzeug  * Debugger is active!
+2024-05-17 11:13:46,136 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 11:13:53,258 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): api.alpaca.markets:443
+2024-05-17 11:13:53,966 DEBUG urllib3.connectionpool https://api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 401 55
+2024-05-17 11:13:53,966 ERROR __main__ Error fetching portfolio balance: request is not authorized
+2024-05-17 11:13:53,979 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:13:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-05-17 11:13:54,049 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:13:54] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-05-17 11:13:54,050 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:13:54] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-05-17 11:13:54,061 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:13:54] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-17 11:15:55,662 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-17 11:15:55,779 INFO werkzeug  * Restarting with stat
+2024-05-17 11:15:56,637 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 11:15:56,640 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 11:15:56,641 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 11:15:56,641 INFO apscheduler.scheduler Scheduler started
+2024-05-17 11:15:56,641 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 11:15:56,642 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 12:15:56.640165+10:00 (in 3599.998000 seconds)
+2024-05-17 11:15:56,643 WARNING werkzeug  * Debugger is active!
+2024-05-17 11:15:56,647 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 11:16:04,486 DEBUG urllib3.connectionpool Starting new HTTPS connection (1): api.alpaca.markets:443
+2024-05-17 11:16:05,231 DEBUG urllib3.connectionpool https://api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 401 55
+2024-05-17 11:16:05,231 ERROR __main__ Error fetching portfolio balance: request is not authorized
+2024-05-17 11:16:05,244 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:16:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-05-17 11:16:05,316 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:16:05] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-05-17 11:16:05,317 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:16:05] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-05-17 11:16:05,322 INFO werkzeug 127.0.0.1 - - [17/May/2024 11:16:05] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-05-17 11:17:33,139 INFO werkzeug  * Detected change in 'C:\\Users\\Andrew\\OneDrive\\Projects\\Python\\tradingbot\\app.py', reloading
+2024-05-17 11:17:33,229 INFO werkzeug  * Restarting with stat
+2024-05-17 11:17:34,032 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 11:17:34,036 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 11:17:34,036 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 11:17:34,036 INFO apscheduler.scheduler Scheduler started
+2024-05-17 11:17:34,037 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 11:17:34,037 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 12:17:34.036784+10:00 (in 3599.998999 seconds)
+2024-05-17 11:17:34,038 WARNING werkzeug  * Debugger is active!
+2024-05-17 11:17:34,042 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 22:14:43,324 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 22:14:43,331 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 22:14:43,332 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 22:14:43,332 INFO apscheduler.scheduler Scheduler started
+2024-05-17 22:14:43,333 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 22:14:43,333 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 23:14:43.331192+10:00 (in 3599.998000 seconds)
+2024-05-17 22:14:43,339 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-17 22:14:43,339 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-05-17 22:14:43,340 INFO werkzeug  * Restarting with stat
+2024-05-17 22:14:44,124 DEBUG tzlocal Looking up time zone info from registry
+2024-05-17 22:14:44,127 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-05-17 22:14:44,128 INFO apscheduler.scheduler Added job "wait_until_market_open" to job store "default"
+2024-05-17 22:14:44,128 INFO apscheduler.scheduler Scheduler started
+2024-05-17 22:14:44,128 DEBUG apscheduler.scheduler Looking for jobs to run
+2024-05-17 22:14:44,129 DEBUG apscheduler.scheduler Next wakeup is due at 2024-05-17 23:14:44.127339+10:00 (in 3599.997998 seconds)
+2024-05-17 22:14:44,130 WARNING werkzeug  * Debugger is active!
+2024-05-17 22:14:44,133 INFO werkzeug  * Debugger PIN: 678-019-846
+2024-05-17 22:14:56,849 INFO werkzeug 127.0.0.1 - - [17/May/2024 22:14:56] "GET / HTTP/1.1" 200 -
+2024-05-17 22:14:57,124 INFO werkzeug 127.0.0.1 - - [17/May/2024 22:14:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-05-17 22:14:57,193 INFO werkzeug 127.0.0.1 - - [17/May/2024 22:14:57] "[36mGET /static/socket_connection.js HTTP/1.1[0m" 304 -

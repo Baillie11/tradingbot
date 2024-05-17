@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Dashboard</title>
+    <title>Trade Bot Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.socket.io/socket.io-3.1.3.min.js"></script>
+    <script src="{{ url_for('static', filename='socket_connection.js') }}"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>Trade Bot</h1>
-        <h2>Dashboard</h2>
-    </div>
-    <p><strong>Market Status:</strong> {{ market_status }}</p>
-    {% if check_again_message %}
-    <p><strong>Notice:</strong> {{ check_again_message }}</p>
-    {% if countdown_message %}
-        <p>Market will re-open in: {{ countdown_message }}</p>
-    {% endif %}
-{% endif %}
-    <p><strong>Portfolio Balance:</strong> ${{ portfolio_balance }}</p>
-
+    {% include 'header.html' %}
+    <p><strong>Market Status:</strong> <span id="market_status">{{ market_status | default('Not Available') }}</span></p>
+    <p><strong>Portfolio Balance:</strong> <span id="portfolio_balance">${{ portfolio_balance | default(0) }}</span></p>
     <h2>Stock Prices</h2>
     <div class="card-container">
         {% for data in data_list %}
@@ -41,5 +33,6 @@
             </div>
         {% endfor %}
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>

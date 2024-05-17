@@ -5,7 +5,17 @@ body {
     background-color: #f4f4f9;
     color: #333;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Make sure the body takes at least the viewport height */
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
 
 .header {
     background-color: #007bff;
@@ -20,7 +30,12 @@ body {
     width: 100%;
     gap: 5px;
     padding: 5px;
-    margin: 0 auto
+    margin: 0 auto;
+    flex: 1;  /* Flex grow to take available space */
+}
+
+.content {
+    flex: 1;  /* Flex grow to take available space */
 }
 
 .card {

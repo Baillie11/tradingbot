@@ -12,10 +12,11 @@
     {% include 'header.html' %}
     <p><strong>Market Status:</strong> <span id="market_status">{{ market_status | default('Not Available') }}</span></p>
     <p><strong>Portfolio Balance:</strong> <span id="portfolio_balance">${{ portfolio_balance | default(0) }}</span></p>
+    <p><strong>Account Type:</strong> <span id="account_type">{{ account_type | default('Unknown') }}</span></p>
     <h2>Stock Prices</h2>
     <div class="card-container">
         {% for data in data_list %}
-            <div class="card">
+            <div class="card" id="card-{{ data.symbol }}">
                 <h3>{{ data.symbol }}</h3>
                 <p>Last Close: ${{ data.last_close }}<br>
                 {% if data.last_close_time %}
@@ -25,13 +26,23 @@
                 {% endif %}
                 </p>
                 <p>Exchange: {{ data.exchange }}</p>
-                {% if data.message %}
-                    <em>{{ data.message }}</em>
-                {% else %}
-                    <p>SMA: {{ data.sma }}</p>
-                {% endif %}
+                <p><strong>Last Action:</strong> <span id="last_action-{{ data.symbol }}">{% if last_actions[data.symbol].action %} {{ last_actions[data.symbol].action }} at ${{ last_actions[data.symbol].price }} {% else %} No action taken {% endif %}</span></p>
             </div>
         {% endfor %}
+    </div>
+    <h2>Trade History</h2>
+    <div class="trade-history">
+        {% if trade_records %}
+            <ul>
+                {% for trade in trade_records %}
+                    <li>
+                        <strong>{{ trade.side|capitalize }}:</strong> {{ trade.symbol }} - {{ trade.qty }} shares at ${{ trade.price }} on {{ trade.time.strftime('%Y-%m-%d %H:%M:%S') }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No trades have been made yet.</p>
+        {% endif %}
     </div>
     {% include 'footer.html' %}
 </body>

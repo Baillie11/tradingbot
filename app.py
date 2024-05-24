@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from apscheduler.schedulers.background import BackgroundScheduler
 import csv
+import yfinance as yf
 
 # Load environment variables from .env file
 load_dotenv()
@@ -18,6 +19,14 @@ SECRET_KEY = os.getenv('APCA_API_SECRET_KEY')
 BASE_URL = os.getenv('APCA_API_BASE_URL', 'https://paper-api.alpaca.markets')
 
 api = tradeapi.REST(API_KEY, SECRET_KEY, BASE_URL, api_version='v2')
+
+def get_last_close_price(symbol):
+    stock = yf.Ticker(symbol)
+    hist = stock.history(period="1d")
+    if not hist.empty:
+        return hist['Close'][0]
+    else:
+        raise ValueError(f"No data available for {symbol}")
 
 # Define your trading strategy thresholds
 BUY_THRESHOLDS = {'AAPL': 150.00, 'TSLA': 600.00}
@@ -182,12 +191,14 @@ def handle_connect():
     })
 
 if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
     scheduler = BackgroundScheduler()
     scheduler.add_job(func=check_trading_conditions, trigger="interval", minutes=1)
     scheduler.add_job(func=emit_data_updates, trigger="interval", seconds=30)  # Emit data updates every 30 seconds
     scheduler.start()
     try:
         socketio.run(app, debug=True)
+        app.run(host='0.0.0.0', port=5000, debug=True)
     except (KeyboardInterrupt, SystemExit):
         pass
     finally:

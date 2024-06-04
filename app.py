@@ -29,9 +29,9 @@ def get_last_close_price(symbol):
         raise ValueError(f"No data available for {symbol}")
 
 # Define your trading strategy thresholds
-BUY_THRESHOLDS = {'AAPL': 150.00, 'TSLA': 600.00}
-SELL_THRESHOLDS = {'AAPL': 170.00, 'TSLA': 650.00}
-SYMBOLS = ['AAPL', 'TSLA']
+BUY_THRESHOLDS = {'AAPL': 192.00, 'TSLA': 177.00, 'GLD':215.00}
+SELL_THRESHOLDS = {'AAPL': 194.00, 'TSLA': 180.00, 'GLD': 218.00}
+SYMBOLS = ['AAPL', 'TSLA', 'GLD']
 
 # Global variables to store the last action and trade records
 last_actions = {symbol: {'action': None, 'price': None} for symbol in SYMBOLS}

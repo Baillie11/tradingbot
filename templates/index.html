@@ -26,6 +26,8 @@
                 {% endif %}
                 </p>
                 <p>Exchange: {{ data.exchange }}</p>
+                <p>Buy Threshold: ${{ data.buy_threshold }}</p>
+                <p>Sell Threshold: ${{ data.sell_threshold }}</p>
                 <p><strong>Last Action:</strong> <span id="last_action-{{ data.symbol }}">{% if last_actions[data.symbol].action %} {{ last_actions[data.symbol].action }} at ${{ last_actions[data.symbol].price }} {% else %} No action taken {% endif %}</span></p>
             </div>
         {% endfor %}

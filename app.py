@@ -75,6 +75,10 @@ def get_portfolio_balance():
     account = api.get_account()
     return float(account.equity)
 
+def get_buying_power():
+    account = api.get_account()
+    return float(account.buying_power)
+
 def get_positions():
     try:
         positions = api.list_positions()
@@ -180,11 +184,13 @@ def emit_data_updates():
     data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
+    buying_power = get_buying_power()
     account_type = get_account_type()
     socketio.emit('data_update', {
         'data_list': data_list,
         'market_status': market_status,
         'portfolio_balance': portfolio_balance,
+        'buying_power': buying_power,
         'account_type': account_type,
         'last_actions': last_actions,
         'trade_records': trade_records
@@ -196,8 +202,9 @@ def index():
     data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
+    buying_power = get_buying_power()
     account_type = get_account_type()
-    return render_template('index.html', data_list=data_list, market_status=market_status, portfolio_balance=portfolio_balance, account_type=account_type, last_actions=last_actions, trade_records=trade_records)
+    return render_template('index.html', data_list=data_list, market_status=market_status, portfolio_balance=portfolio_balance, buying_power=buying_power, account_type=account_type, last_actions=last_actions, trade_records=trade_records)
 
 @socketio.on('connect')
 def handle_connect():
@@ -205,11 +212,13 @@ def handle_connect():
     data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
+    buying_power = get_buying_power()
     account_type = get_account_type()
     socketio.emit('data_update', {
         'data_list': data_list,
         'market_status': market_status,
         'portfolio_balance': portfolio_balance,
+        'buying_power': buying_power,
         'account_type': account_type,
         'last_actions': last_actions,
         'trade_records': trade_records

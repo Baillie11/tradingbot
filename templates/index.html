@@ -12,6 +12,7 @@
     {% include 'header.html' %}
     <p><strong>Market Status:</strong> <span id="market_status">{{ market_status | default('Not Available') }}</span></p>
     <p><strong>Portfolio Balance:</strong> <span id="portfolio_balance">${{ portfolio_balance | default(0) }}</span></p>
+    <p><strong>Buying Power:</strong> <span id="buying_power">${{ buying_power | default(0) }}</span></p>
     <p><strong>Account Type:</strong> <span id="account_type">{{ account_type | default('Unknown') }}</span></p>
     <h2>Stock Prices</h2>
     <div class="card-container">

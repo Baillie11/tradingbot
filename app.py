@@ -107,6 +107,9 @@ def get_stock_data(symbol, positions):
             current_price = None
             time = None
 
+    shares_owned = positions.get(symbol, 0)
+    value_in_dollars = round(current_price * shares_owned, 2) if current_price else 0
+
     return {
         'symbol': symbol,
         'last_close': current_price,
@@ -114,9 +117,9 @@ def get_stock_data(symbol, positions):
         'buy_threshold': BUY_THRESHOLDS[symbol],
         'sell_threshold': SELL_THRESHOLDS[symbol],
         'exchange': 'NASDAQ',
-        'shares_owned': positions.get(symbol, 0)
+        'shares_owned': shares_owned,
+        'value_in_dollars': value_in_dollars
     }
-
 def place_order(symbol, qty, side, type='market', time_in_force='gtc'):
     global trade_records
     try:
@@ -133,26 +136,34 @@ def place_order(symbol, qty, side, type='market', time_in_force='gtc'):
         while retries > 0:
             order_status = api.get_order(order.id)
             if order_status.status == 'filled':
-                break
+                filled_avg_price = round(float(order_status.filled_avg_price), 2)
+                trade = {
+                    'symbol': symbol,
+                    'qty': qty,
+                    'side': side,
+                    'price': filled_avg_price,
+                    'time': order_status.filled_at
+                }
+                portfolio_balance = get_portfolio_balance()
+                trade_records.append(trade)
+                log_trade_to_file(trade, portfolio_balance)
+
+                # Emit the updated trade and last action
+                last_actions[symbol] = {'action': side.capitalize(), 'price': filled_avg_price}
+                socketio.emit('trade_update', {'symbol': symbol, 'last_action': last_actions[symbol], 'trade_records': trade_records}, broadcast=True)
+                return order
+
+            # Check if the order is canceled or rejected
+            if order_status.status in ['canceled', 'rejected']:
+                logging.error(f"Order {order.id} was {order_status.status}: {order_status}")
+                return None
+
             retries -= 1
             logging.warning(f"Order not filled, retrying... {retries} attempts left.")
-            time.sleep(10)  # Wait for 3 seconds before retrying
-        else:
-            logging.error(f"Order {order.id} not filled after retries.")
-            return None
-        
-        filled_avg_price = round(float(order_status.filled_avg_price), 2)
-        trade = {
-            'symbol': symbol,
-            'qty': qty,
-            'side': side,
-            'price': filled_avg_price,
-            'time': order_status.filled_at
-        }
-        portfolio_balance = get_portfolio_balance()
-        trade_records.append(trade)
-        log_trade_to_file(trade, portfolio_balance)
-        return order
+            time.sleep(3)  # Wait for 3 seconds before retrying
+
+        logging.error(f"Order {order.id} not filled after retries.")
+        return None
     except Exception as e:
         logging.error(f"Error placing order: {e}")
         return None
@@ -167,7 +178,7 @@ def check_trading_conditions():
         return
     
     for symbol in SYMBOLS:
-        stock_data = get_stock_data(symbol)
+        stock_data = get_stock_data(symbol, get_positions())
         current_price = stock_data['last_close']
         if current_price:
             if current_price < BUY_THRESHOLDS[symbol]:

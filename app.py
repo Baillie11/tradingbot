@@ -38,9 +38,9 @@ def get_last_close_price(symbol):
         return None
 
 # Define your trading strategy thresholds
-BUY_THRESHOLDS = {'AAPL': 192.00, 'TSLA': 177.00, 'GLD': 215.00}
-SELL_THRESHOLDS = {'AAPL': 194.00, 'TSLA': 180.00, 'GLD': 218.00}
-SYMBOLS = ['AAPL', 'TSLA', 'GLD']
+BUY_THRESHOLDS = {'FFIE': .58, 'NXTC': 1.20, 'RGF': .65, 'PPSI': 3.70, 'MGRX':0.41, 'CDXC': 3.20}
+SELL_THRESHOLDS = {'FFIE': .5898, 'NXTC': 1.2110, 'RGF': .66, 'PPSI':4.00, 'MGRX':0.49,'CDXC':3.35}
+SYMBOLS = ['FFIE', 'NXTC', 'RGF', 'PPSI', 'MGRX','CDXC']
 
 # Global variables to store the last action and trade records
 last_actions = {symbol: {'action': None, 'price': None} for symbol in SYMBOLS}
@@ -75,7 +75,15 @@ def get_portfolio_balance():
     account = api.get_account()
     return float(account.equity)
 
-def get_stock_data(symbol):
+def get_positions():
+    try:
+        positions = api.list_positions()
+        return {position.symbol: int(position.qty) for position in positions}
+    except Exception as e:
+        print(f"Error getting positions: {e}")
+        return {}
+
+def get_stock_data(symbol, positions):
     clock = api.get_clock()
     if clock.is_open:
         try:
@@ -101,7 +109,8 @@ def get_stock_data(symbol):
         'last_close_time': time,
         'buy_threshold': BUY_THRESHOLDS[symbol],
         'sell_threshold': SELL_THRESHOLDS[symbol],
-        'exchange': 'NASDAQ'
+        'exchange': 'NASDAQ',
+        'shares_owned': positions.get(symbol, 0)
     }
 
 def place_order(symbol, qty, side, type='market', time_in_force='gtc'):
@@ -143,54 +152,6 @@ def place_order(symbol, qty, side, type='market', time_in_force='gtc'):
     except Exception as e:
         logging.error(f"Error placing order: {e}")
         return None
-    
-def place_order(symbol, qty, side, type='market', time_in_force='gtc'):
-    global trade_records
-    try:
-        order = api.submit_order(
-            symbol=symbol,
-            qty=qty,
-            side=side,
-            type=type,
-            time_in_force=time_in_force
-        )
-        logging.info(f"Order submitted: {order}")
-        # Wait for the order to be filled
-        retries = 3
-        while retries > 0:
-            order_status = api.get_order(order.id)
-            if order_status.status == 'filled':
-                filled_avg_price = round(float(order_status.filled_avg_price), 2)
-                trade = {
-                    'symbol': symbol,
-                    'qty': qty,
-                    'side': side,
-                    'price': filled_avg_price,
-                    'time': order_status.filled_at
-                }
-                portfolio_balance = get_portfolio_balance()
-                trade_records.append(trade)
-                log_trade_to_file(trade, portfolio_balance)
-
-                # Emit the updated trade and last action
-                last_actions[symbol] = {'action': side.capitalize(), 'price': filled_avg_price}
-                socketio.emit('trade_update', {'symbol': symbol, 'last_action': last_actions[symbol], 'trade_records': trade_records}, broadcast=True)
-                return order
-            
-            # Check if the order is canceled or rejected
-            if order_status.status in ['canceled', 'rejected']:
-                logging.error(f"Order {order.id} was {order_status.status}: {order_status}")
-                return None
-
-            retries -= 1
-            logging.warning(f"Order not filled, retrying... {retries} attempts left.")
-            time.sleep(3)  # Wait for 3 seconds before retrying
-
-        logging.error(f"Order {order.id} not filled after retries.")
-        return None
-    except Exception as e:
-        logging.error(f"Error placing order: {e}")
-        return None
 
 def check_trading_conditions():
     global last_actions
@@ -214,9 +175,9 @@ def check_trading_conditions():
         else:
             logging.warning(f"No current price available to evaluate trading conditions for {symbol}.")
 
-
 def emit_data_updates():
-    data_list = [get_stock_data(symbol) for symbol in SYMBOLS]
+    positions = get_positions()
+    data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
     account_type = get_account_type()
@@ -231,7 +192,8 @@ def emit_data_updates():
 
 @app.route('/')
 def index():
-    data_list = [get_stock_data(symbol) for symbol in SYMBOLS]
+    positions = get_positions()
+    data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
     account_type = get_account_type()
@@ -239,7 +201,8 @@ def index():
 
 @socketio.on('connect')
 def handle_connect():
-    data_list = [get_stock_data(symbol) for symbol in SYMBOLS]
+    positions = get_positions()
+    data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
     account_type = get_account_type()

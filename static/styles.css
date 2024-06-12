@@ -17,8 +17,6 @@ html, body {
     margin: 0;
 }
 
-
-
 .header {
     background-color: #007bff;
     color: #fff;
@@ -29,7 +27,7 @@ html, body {
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    width: 100%;
+    /*width: 100%;*/
     gap: 5px;
     padding: 5px;
     margin: 0 auto;
@@ -42,12 +40,12 @@ html, body {
 
 .card {
     display: inline-block;
-    background-color: #b2b2b2;
-    border: 1px solid #ddd;
+    background-color: rgba(0, 123, 255, 0.331);
+    border: 1px solid #1909f0;
     padding: 1px;
     border-radius: 25px 0;
     box-shadow: 0 6px 17px rgba(0,0,0,0.1);
-    width: 70%; /* default to full width on mobile devices */
+    width: 100PX; /* default to full width on mobile devices */
     margin: 5px 0; /* vertical margin for mobile */
     text-align:center
 }

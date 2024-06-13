@@ -1,6 +1,6 @@
 import os
 import time
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from flask_socketio import SocketIO
 import alpaca_trade_api as tradeapi
 from datetime import datetime, timedelta
@@ -13,12 +13,18 @@ import logging
 # Load environment variables from .env file
 load_dotenv()
 
+
 app = Flask(__name__)
 socketio = SocketIO(app)
 
 API_KEY = os.getenv('APCA_API_KEY_ID')
 SECRET_KEY = os.getenv('APCA_API_SECRET_KEY')
 BASE_URL = os.getenv('APCA_API_BASE_URL', 'https://paper-api.alpaca.markets')
+
+print (API_KEY)
+print(os.getenv('APCA_API_KEY_ID'))
+print (SECRET_KEY)
+print (os.getenv('APCA_API_SECRET_KEY'))
 
 api = tradeapi.REST(API_KEY, SECRET_KEY, BASE_URL, api_version='v2')
 
@@ -37,10 +43,18 @@ def get_last_close_price(symbol):
         print(f"Error fetching last close price for {symbol} from Yahoo Finance: {e}")
         return None
 
-# Define your trading strategy thresholds
-BUY_THRESHOLDS = {'FFIE': .58, 'NXTC': 1.20, 'RGF': .65, 'PPSI': 3.70, 'MGRX':0.41, 'CDXC': 3.20}
-SELL_THRESHOLDS = {'FFIE': .5898, 'NXTC': 1.2110, 'RGF': .66, 'PPSI':4.00, 'MGRX':0.49,'CDXC':3.35}
+# Default trading strategy thresholds
+default_buy_thresholds = {'FFIE': .58, 'NXTC': 1.41, 'RGF': .65, 'PPSI': 3.70, 'MGRX':0.41, 'CDXC': 3.20}
+default_sell_thresholds = {'FFIE': .52, 'NXTC': 1.4150, 'RGF': .66, 'PPSI':4.00, 'MGRX':0.42,'CDXC':3.21}
 SYMBOLS = ['FFIE', 'NXTC', 'RGF', 'PPSI', 'MGRX','CDXC']
+strategies = ['Scalping', 'Momentum Trading', 'Breakout Trading', 'Reversal Trading', 'News-Based Trading']
+
+# Initialize thresholds with default values
+BUY_THRESHOLDS = default_buy_thresholds.copy()
+SELL_THRESHOLDS = default_sell_thresholds.copy()
+selected_symbols = SYMBOLS.copy()
+selected_strategy = 'Scalping'
+broker = 'Alpaca'
 
 # Global variables to store the last action and trade records
 last_actions = {symbol: {'action': None, 'price': None} for symbol in SYMBOLS}
@@ -95,7 +109,7 @@ def get_stock_data(symbol, positions):
             current_price = round(trade.price, 2)
             time = trade.timestamp
         except Exception as e:
-            print(f"Error getting latest trade for {symbol}: {e}")
+            logging.error(f"Error getting latest trade for {symbol}: {e}")
             current_price = None
             time = None
     else:
@@ -103,7 +117,7 @@ def get_stock_data(symbol, positions):
             current_price = get_last_close_price(symbol)
             time = datetime.now()
         except Exception as e:
-            print(f"Error getting last close price for {symbol}: {e}")
+            logging.error(f"Error getting last close price for {symbol}: {e}")
             current_price = None
             time = None
 
@@ -112,7 +126,7 @@ def get_stock_data(symbol, positions):
 
     return {
         'symbol': symbol,
-        'last_close': current_price,
+        'current_price': current_price,  # Updated key from 'last_close' to 'current_price'
         'last_close_time': time,
         'buy_threshold': BUY_THRESHOLDS[symbol],
         'sell_threshold': SELL_THRESHOLDS[symbol],
@@ -120,6 +134,7 @@ def get_stock_data(symbol, positions):
         'shares_owned': shares_owned,
         'value_in_dollars': value_in_dollars
     }
+
 def place_order(symbol, qty, side, type='market', time_in_force='gtc'):
     global trade_records
     try:
@@ -171,15 +186,22 @@ def place_order(symbol, qty, side, type='market', time_in_force='gtc'):
 def check_trading_conditions():
     global last_actions
     clock = api.get_clock()
-    
+
     # Check if the market is open
     if not clock.is_open:
         logging.info("Market is closed. No trading will be done.")
         return
-    
-    for symbol in SYMBOLS:
+
+    for symbol in selected_symbols:
         stock_data = get_stock_data(symbol, get_positions())
-        current_price = stock_data['last_close']
+        current_price = stock_data['current_price']  # Use 'current_price' instead of 'last_close'
+        
+        # Debugging: Print current price and thresholds
+        print(f"Checking conditions for {symbol}:")
+        print(f"  Current price: {current_price}")
+        print(f"  Buy threshold: {BUY_THRESHOLDS[symbol]}")
+        print(f"  Sell threshold: {SELL_THRESHOLDS[symbol]}")
+
         if current_price:
             if current_price < BUY_THRESHOLDS[symbol]:
                 logging.info(f"Current price {current_price} is below buy threshold for {symbol}. Buying.")
@@ -192,7 +214,7 @@ def check_trading_conditions():
 
 def emit_data_updates():
     positions = get_positions()
-    data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
+    data_list = [get_stock_data(symbol, positions) for symbol in selected_symbols]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
     buying_power = get_buying_power()
@@ -210,17 +232,41 @@ def emit_data_updates():
 @app.route('/')
 def index():
     positions = get_positions()
-    data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
+    data_list = [get_stock_data(symbol, positions) for symbol in selected_symbols]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
     buying_power = get_buying_power()
     account_type = get_account_type()
     return render_template('index.html', data_list=data_list, market_status=market_status, portfolio_balance=portfolio_balance, buying_power=buying_power, account_type=account_type, last_actions=last_actions, trade_records=trade_records)
 
+@app.route('/setup', methods=['GET', 'POST'])
+def setup():
+    global selected_symbols, BUY_THRESHOLDS, SELL_THRESHOLDS, broker, selected_strategy
+    if request.method == 'POST':
+        selected_symbols = request.form.getlist('symbols')
+        selected_strategy = request.form['strategy']
+        broker = request.form['broker']
+        for symbol in selected_symbols:
+            BUY_THRESHOLDS[symbol] = float(request.form[f'buy_{symbol}'])
+            SELL_THRESHOLDS[symbol] = float(request.form[f'sell_{symbol}'])
+        return redirect(url_for('index'))
+    
+    return render_template('setup.html', symbols=SYMBOLS, strategies=strategies, broker=broker, selected_symbols=selected_symbols, buy_thresholds=BUY_THRESHOLDS, sell_thresholds=SELL_THRESHOLDS, selected_strategy=selected_strategy)
+
+@app.route('/about')
+def about():
+    version = "1.0.0"
+    updates = [
+        "Initial release with basic trading features",
+        "Added support for custom stock selection",
+        "Implemented various trading strategies"
+    ]
+    return render_template('about.html', version=version, updates=updates)
+
 @socketio.on('connect')
 def handle_connect():
     positions = get_positions()
-    data_list = [get_stock_data(symbol, positions) for symbol in SYMBOLS]
+    data_list = [get_stock_data(symbol, positions) for symbol in selected_symbols]
     market_status = get_market_status()
     portfolio_balance = get_portfolio_balance()
     buying_power = get_buying_power()

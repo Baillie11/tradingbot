@@ -17,11 +17,35 @@ html, body {
     margin: 0;
 }
 
-.header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
+/* Add this to your existing CSS file */
+
+header {
+    background-color: #333;
+    padding: 10px 0;
 }
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
 
 .container {
     display: flex;
@@ -46,7 +70,8 @@ html, body {
     border-radius: 25px 0;
     box-shadow: 0 6px 17px rgba(0,0,0,0.1);
     width: 100PX; /* default to full width on mobile devices */
-    margin: 5px 0; /* vertical margin for mobile */
+ 
+   
     text-align:center
 }
 

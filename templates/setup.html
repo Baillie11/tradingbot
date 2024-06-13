@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <h2>Setup</h2>
+    <form method="POST">
+        <h3>Select Stocks to Trade</h3>
+        {% for symbol in symbols %}
+            <input type="checkbox" name="symbols" value="{{ symbol }}" {% if symbol in selected_symbols %}checked{% endif %}> {{ symbol }}<br>
+        {% endfor %}
+        <h3>Set Buy and Sell Prices</h3>
+        {% for symbol in selected_symbols %}
+            <label for="buy_{{ symbol }}">Buy Price for {{ symbol }}:</label>
+            <input type="text" id="buy_{{ symbol }}" name="buy_{{ symbol }}" value="{{ buy_thresholds[symbol] }}"><br>
+            <label for="sell_{{ symbol }}">Sell Price for {{ symbol }}:</label>
+            <input type="text" id="sell_{{ symbol }}" name="sell_{{ symbol }}" value="{{ sell_thresholds[symbol] }}"><br>
+        {% endfor %}
+        <h3>Select Broker</h3>
+        <select name="broker">
+            <option value="Alpaca" {% if broker == 'Alpaca' %}selected{% endif %}>Alpaca</option>
+            <!-- Add other broker options here if needed -->
+        </select>
+        <h3>Select Trading Strategy</h3>
+        <select name="strategy">
+            {% for strategy in strategies %}
+                <option value="{{ strategy }}" {% if strategy == selected_strategy %}selected{% endif %}>{{ strategy }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Save Settings">
+    </form>
+    {% include 'footer.html' %}
+</body>
+</html>

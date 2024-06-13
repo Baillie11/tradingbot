@@ -19,6 +19,9 @@
         {% for data in data_list %}
             <div class="card" id="card-{{ data.symbol }}">
                 <h3>{{ data.symbol }}</h3>
+                <!--<a href="#" class="graph-icon" title="View Graph">-->
+                    <!--<img src="{{ url_for('static', filename='graph-icon.png') }}" alt="Graph">-->
+                </a>
                 <p>Last Close: ${{ data.last_close }}<br>
                 {% if data.last_close_time %}
                     ({{ data.last_close_time.strftime('%Y-%m-%d %H:%M:%S') }})
